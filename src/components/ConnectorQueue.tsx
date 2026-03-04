@@ -57,7 +57,7 @@ export default function ConnectorQueue({ connectors, dispatch }: Props) {
     error,
     connectUrl,
     reset,
-  } = useVanaConnect({ environment: (process.env.NEXT_PUBLIC_VANA_ENVIRONMENT as "dev" | "production") ?? "production" });
+  } = useVanaConnect({ environment: process.env.NEXT_PUBLIC_VANA_ENVIRONMENT as "dev" | "prod" | undefined });
 
   const activeIdRef = useRef<string | null>(null);
   const prevHookStatus = useRef(hookStatus);
