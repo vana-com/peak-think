@@ -5,8 +5,8 @@ function truncateData(data: Record<string, unknown>): Record<string, string> {
   const truncated: Record<string, string> = {};
 
   for (const [scope, value] of Object.entries(data)) {
-    const raw = JSON.stringify(value);
-    truncated[scope] = raw.length > 8000 ? raw.slice(0, 8000) + "..." : raw;
+    const raw = typeof value === "string" ? value : JSON.stringify(value);
+    truncated[scope] = raw.length > 500_000 ? raw.slice(0, 500_000) + "..." : raw;
   }
 
   return truncated;
