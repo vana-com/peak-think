@@ -219,7 +219,7 @@ export default function ConnectorQueue({ connectors, dispatch }: Props) {
         return (
           <div key={def.id} className={rowClass}>
             <div className="connector-icon">
-              <img src={def.icon} alt={def.label} width={24} height={24} />
+              <img src={def.icon} alt={def.label} style={{ width: 24, height: 24, objectFit: "contain" }} />
             </div>
             <div className="connector-info">
               <div className="connector-label">{def.label}</div>
