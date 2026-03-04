@@ -38,8 +38,8 @@ You MUST respond with valid JSON matching this exact schema:
   "summary": "<2-3 sentences summarizing the key finding about their sleep-think patterns>",
   "correlations": [
     {
-      "title": "<short title like 'Deep Sleep & Creativity'>",
-      "finding": "<specific finding referencing actual data, e.g. 'When you get 1.5+ hours of deep sleep, your next-day conversations are 40% longer and cover more complex topics'>",
+      "title": "<short title, 3-5 words, e.g. 'Deep Sleep & Creativity'>",
+      "finding": "<one concise sentence about the pattern, e.g. 'More deep sleep correlates with longer, more creative conversations the next day'. NO specific dates or day references — focus on the general correlation.>",
       "impact": "high" | "medium" | "low",
       "direction": "positive" | "negative"
     }
