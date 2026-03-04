@@ -120,10 +120,18 @@ export default function PeakThinkApp() {
   const handleAnalyze = useCallback(async () => {
     dispatch({ type: "SET_STEP", step: "analyzing" });
     try {
+      // Truncate each scope client-side to stay under Vercel's 4.5MB body limit.
+      // The server further truncates to 8K per scope for the LLM prompt, so 500K is plenty.
+      const MAX_PER_SCOPE = 500_000;
+      const trimmed: Record<string, string> = {};
+      for (const [scope, value] of Object.entries(connectedData)) {
+        const raw = JSON.stringify(value);
+        trimmed[scope] = raw.length > MAX_PER_SCOPE ? raw.slice(0, MAX_PER_SCOPE) : raw;
+      }
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ connectorData: connectedData }),
+        body: JSON.stringify({ connectorData: trimmed }),
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
