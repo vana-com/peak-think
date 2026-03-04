@@ -37,13 +37,13 @@ export const MOCK_ANALYSIS: AnalysisResult = {
     },
   ],
   weeklyPattern: [
-    { day: "Monday", sleepQuality: 3, thinkingQuality: 3, readiness: 3 },
-    { day: "Tuesday", sleepQuality: 4, thinkingQuality: 4, readiness: 4 },
+    { day: "Monday", sleepQuality: 2, thinkingQuality: 3, readiness: 2 },
+    { day: "Tuesday", sleepQuality: 4, thinkingQuality: 4, readiness: 5 },
     { day: "Wednesday", sleepQuality: 5, thinkingQuality: 5, readiness: 5 },
-    { day: "Thursday", sleepQuality: 4, thinkingQuality: 4, readiness: 4 },
-    { day: "Friday", sleepQuality: 3, thinkingQuality: 3, readiness: 3 },
-    { day: "Saturday", sleepQuality: 2, thinkingQuality: 2, readiness: 2 },
-    { day: "Sunday", sleepQuality: 4, thinkingQuality: 3, readiness: 4 },
+    { day: "Thursday", sleepQuality: 3, thinkingQuality: 4, readiness: 3 },
+    { day: "Friday", sleepQuality: 2, thinkingQuality: 2, readiness: 1 },
+    { day: "Saturday", sleepQuality: 1, thinkingQuality: 1, readiness: 1 },
+    { day: "Sunday", sleepQuality: 4, thinkingQuality: 2, readiness: 3 },
   ],
   conversationBreakdown: [
     {

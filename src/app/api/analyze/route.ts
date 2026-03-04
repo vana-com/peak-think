@@ -85,7 +85,7 @@ You MUST respond with valid JSON matching this exact schema:
 
 Important guidelines:
 - Provide 3-5 correlations, focusing on the most interesting sleep-cognition links
-- Include all 7 days (Monday through Sunday) in weeklyPattern, derived from actual data patterns
+- Include all 7 days (Monday through Sunday) in weeklyPattern, derived from actual data patterns. IMPORTANT: Use the FULL 1-5 range — compute averages per day-of-week from Oura scores (sleep score, readiness score) and map them: <65=1, 65-72=2, 73-79=3, 80-86=4, >=87=5. There MUST be meaningful variation between days — if data shows weekends differ from weekdays, reflect that clearly. Do NOT cluster all values around 3-4.
 - Provide 4-6 conversation categories
 - Provide 3-5 peak conditions with specific thresholds from the data
 - Provide 3-5 actionable recommendations
