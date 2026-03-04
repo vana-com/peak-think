@@ -2,7 +2,7 @@ export const config = {
   privateKey: (process.env.VANA_PRIVATE_KEY ??
     process.env.VANA_APP_PRIVATE_KEY) as `0x${string}`,
   appUrl: process.env.APP_URL ?? "",
-  environment: "dev" as const,
+  environment: (process.env.VANA_ENVIRONMENT ?? "production") as "dev" | "production",
   llm: {
     apiUrl:
       process.env.LLM_API_URL ?? "https://api.openai.com/v1/chat/completions",
