@@ -152,6 +152,15 @@ export default function PeakThinkApp() {
         <div style={{ marginTop: 32 }}>
           <ChatInterface analysis={state.analysis} />
         </div>
+        <div style={{ marginTop: 24, textAlign: "center" }}>
+          <button
+            type="button"
+            className="btn-ghost"
+            onClick={handleAnalyze}
+          >
+            Re-analyze
+          </button>
+        </div>
       </>
     );
   }
