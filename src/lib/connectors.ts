@@ -5,14 +5,14 @@ export const CONNECTORS: ConnectorDef[] = [
     id: "oura",
     label: "Oura Ring",
     description: "Sleep quality, readiness scores, and recovery data",
-    icon: "\u{1F4A4}",
+    icon: "/icons/oura.png",
     scope: "oura.sleep",
   },
   {
     id: "chatgpt",
     label: "ChatGPT",
     description: "Conversation history, topics, and thinking patterns",
-    icon: "\u{1F9E0}",
+    icon: "/icons/chatgpt.svg",
     scope: "chatgpt.conversations",
   },
 ];
